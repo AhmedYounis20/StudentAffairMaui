@@ -4,7 +4,7 @@ namespace StudentAffairMaui;
 
 public partial class TeachersForm : ContentPage
 {
-	public TeachersForm(StudentsFormViewModel viewModel)
+	public TeachersForm(TeachersFormViewModel viewModel)
 	{
 		InitializeComponent();
 		this.BindingContext = viewModel;

@@ -14,7 +14,7 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
-		builder.Services.AddScoped(e => new HttpClient());
+		builder.Services.AddScoped(e => new HttpClient { BaseAddress= new Uri("https://99ef-102-42-200-146.ngrok.io")});
 
 		// Services
         builder.Services.AddSingleton<ITeachersService, TeachersService>();
@@ -28,11 +28,17 @@ public static class MauiProgram
         builder.Services.AddSingleton<TeachersRoot>();
         builder.Services.AddTransient<TeachersForm>();
 
-        //builder.Services.AddSingleton<ClassRoomsRoot>();
-        //builder.Services.AddTransient<ClassRoomsForm>();  
+        builder.Services.AddSingleton<ClassRoomsRoot>();
+        builder.Services.AddTransient<ClassRoomsForm>();
         // view Model 
         builder.Services.AddSingleton<StudentsRootViewModel>();
         builder.Services.AddTransient<StudentsFormViewModel>();
+
+        builder.Services.AddSingleton<TeachersRootViewModel>();
+        builder.Services.AddTransient<TeachersFormViewModel>();
+
+        builder.Services.AddSingleton<ClassRoomsRootViewModel>();
+        builder.Services.AddTransient<ClassRoomsFormViewModel>();
 
         return builder.Build();
 	}

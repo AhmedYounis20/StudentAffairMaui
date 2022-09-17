@@ -66,10 +66,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Pages\classRooms\ClassRoomsForm.xaml.cs">
+	  <Compile Update="Pages\ClassRooms\ClassRoomsForm.xaml.cs">
 	    <DependentUpon>ClassRoomsForm.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Pages\classRooms\ClassRoomsRoot.xaml.cs">
+	  <Compile Update="Pages\ClassRooms\ClassRoomsRoot.xaml.cs">
 	    <DependentUpon>ClassRoomsRoot.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Pages\Teachers\TeachersForm.xaml.cs">
@@ -84,10 +84,10 @@
 	  <MauiXaml Update="Pages\BaseSettingPages\BaseForm.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\classRooms\ClassRoomsForm.xaml">
+	  <MauiXaml Update="Pages\ClassRooms\ClassRoomsForm.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\classRooms\ClassRoomsRoot.xaml">
+	  <MauiXaml Update="Pages\ClassRooms\ClassRoomsRoot.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Teachers\TeachersForm.xaml">

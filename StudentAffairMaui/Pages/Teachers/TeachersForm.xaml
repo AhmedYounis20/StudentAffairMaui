@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentAffairMaui.TeachersForm"
              xmlns:viewModels="clr-namespace:StudentAffairMaui.ViewModels"
              x:DataType="viewModels:TeachersFormViewModel"
-             x:Class="StudentAffairMaui.TeachersForm"
-             Title="Teacher Form">
+             Title="ClassRoom Form">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Label">
@@ -38,6 +38,8 @@
             <DatePicker Date="{Binding Birthdate}" />
             <BoxView HeightRequest="0.8" Color="Gray"/>
         </VerticalStackLayout>
+
+
         <HorizontalStackLayout HorizontalOptions="CenterAndExpand" Margin="20" >
             <Button Text="save" Command="{Binding AddTeacherCommand}"  HorizontalOptions="StartAndExpand" WidthRequest="150"/>
             <Button Text="cancel" Command="{Binding OnCancelCommand}"  HorizontalOptions="EndAndExpand" WidthRequest="150"/>

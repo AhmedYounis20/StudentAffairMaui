@@ -40,7 +40,6 @@ public partial class StudentsFormViewModel : BaseSettingsFormViewModel<Student>
         }
         else 
             await Shell.Current.DisplayAlert("Netowk Falid", "Please Check Your Wifi or Mobile Data.", "Ok");
-        await Shell.Current.DisplayAlert("Netowk Falid", Connectivity.Current.NetworkAccess.ToString(), "Ok");
         await Cancel();
     }
     [ICommand]

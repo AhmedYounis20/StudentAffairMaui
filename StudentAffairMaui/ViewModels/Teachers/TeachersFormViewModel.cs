@@ -21,7 +21,7 @@ public partial class TeachersFormViewModel : BaseSettingsFormViewModel<Teacher>
             try
             {
                 
-                Teacher student = await _teachersService.Create(new Teacher
+                Teacher teacher = await _teachersService.Create(new Teacher
                 {
                     Name = Name,
                     Phone = Phone,

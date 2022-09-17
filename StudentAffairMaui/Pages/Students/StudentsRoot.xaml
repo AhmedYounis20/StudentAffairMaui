@@ -6,7 +6,9 @@
              x:DataType="viewModels:StudentsRootViewModel"
              x:Class="StudentAffairMaui.StudentsRoot"
              Title="Students">
+    <ScrollView>
     <StackLayout>
+        
         <Button Text="add Student" Command="{Binding AddStudentCommand}" HorizontalOptions="EndAndExpand"/>
         <Label Text="oamr" >
             <Label.GestureRecognizers>
@@ -42,4 +44,5 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
     </StackLayout>
+    </ScrollView>
 </ContentPage>

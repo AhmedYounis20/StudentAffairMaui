@@ -9,9 +9,7 @@ public class BaseService<TEntity> : IBaseService<TEntity> where TEntity : Base
     HttpClient _httpClient { get; set; }
     public BaseService(HttpClient httpClient)
     {
-        _httpClient = httpClient;
-        _httpClient.BaseAddress = new Uri("https://www.route.com");
-            
+        _httpClient = httpClient;            
     }
 
     public virtual async Task<TEntity> Create(TEntity entity)

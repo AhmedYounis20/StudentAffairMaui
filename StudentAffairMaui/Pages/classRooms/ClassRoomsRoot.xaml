@@ -5,14 +5,10 @@
              xmlns:viewModels="clr-namespace:StudentAffairMaui.ViewModels"
              x:DataType="viewModels:ClassRoomsRootViewModel"
              x:Class="StudentAffairMaui.ClassRoomsRoot"
-             Title="Teachers">
+             Title="ClassRooms">
     <StackLayout>
-        <Button Text="add Student" Command="{Binding AddClassRoomCommand}" HorizontalOptions="EndAndExpand"/>
-        <Label Text="oamr" >
-            <Label.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding AddClassRoomCommand}"/>
-            </Label.GestureRecognizers>
-        </Label>
+        <Button Text="add ClassRoom" Command="{Binding AddClassRoomCommand}" HorizontalOptions="EndAndExpand"/>
+
         <CollectionView ItemsSource="{Binding Entities}">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:ClassRoom">
