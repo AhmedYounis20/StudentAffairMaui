@@ -14,12 +14,25 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
-		builder.Services.AddScoped(e => new HttpClient { BaseAddress = new Uri("https//www.sdaf.com")});
+		builder.Services.AddScoped(e => new HttpClient());
 
-        builder.Services.AddScoped<StudentsRoot>();
+		// Services
+        builder.Services.AddSingleton<ITeachersService, TeachersService>();
+        builder.Services.AddSingleton<IStudentsService, StudentsService>();
+        builder.Services.AddSingleton<IClassRoomsService, ClassRoomsService>();
 
+        // views ==> Pages
+        builder.Services.AddSingleton<StudentsRoot>();
+        builder.Services.AddTransient<StudentsForm>();
 
-        builder.Services.AddScoped<StudentsRootViewModel>();
+        builder.Services.AddSingleton<TeachersRoot>();
+        builder.Services.AddTransient<TeachersForm>();
+
+        //builder.Services.AddSingleton<ClassRoomsRoot>();
+        //builder.Services.AddTransient<ClassRoomsForm>();  
+        // view Model 
+        builder.Services.AddSingleton<StudentsRootViewModel>();
+        builder.Services.AddTransient<StudentsFormViewModel>();
 
         return builder.Build();
 	}

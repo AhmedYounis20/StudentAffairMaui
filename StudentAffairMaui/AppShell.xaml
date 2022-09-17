@@ -5,21 +5,46 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:StudentAffairMaui"
     Shell.FlyoutBehavior="Flyout">
+    <Shell.FlyoutHeader>
+        <Grid>
+            <Image Source="school.jpg"/>
+        </Grid>
+    </Shell.FlyoutHeader>
 
-    <ShellContent
+    <ShellContent 
         Title="Home"
+        Icon="home.jpg"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+
     <ShellContent
         Title="Test Page"
+        Icon="test.jpg"
         ContentTemplate="{DataTemplate local:TestPage}"
         Route="TestPage" />
+
     <ShellContent
         Title="Base Form"
+        Icon="test.jpg"
         ContentTemplate="{DataTemplate local:BaseForm}"
         Route="BaseForm" />
+
     <ShellContent
         Title="Students"
+        Icon="student.jpg"
         ContentTemplate="{DataTemplate local:StudentsRoot}"
         Route="StudentsRoot" />
+
+    <ShellContent
+        Title="Teachers"
+        Icon="teacher.jpg"
+        ContentTemplate="{DataTemplate local:TeachersRoot}"
+        Route="TeachersRoot" />
+
+    <ShellContent
+        Title="ClassRooms"
+        Icon="classroom.jpg"
+        ContentTemplate="{DataTemplate local:ClassRoomsRoot}"
+        Route="ClassRoomsRoot" />
+
 </Shell>

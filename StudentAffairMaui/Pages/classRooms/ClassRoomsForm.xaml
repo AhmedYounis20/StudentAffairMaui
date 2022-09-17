@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="StudentAffairMaui.StudentsForm"
+             x:Class="StudentAffairMaui.ClassRoomsForm"
              xmlns:viewModels="clr-namespace:StudentAffairMaui.ViewModels"
-             x:DataType="viewModels:StudentsFormViewModel"
-             Title="Student Form">
+             x:DataType="viewModels:ClassRoomsFormViewModel"
+             Title="ClassRoom Form">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Label">
@@ -16,36 +16,27 @@
     <StackLayout Margin="10">
         <VerticalStackLayout Margin="10">
             <Label 
-            Text="Add Update Student"
+            Text="Add Update Teacher"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         </VerticalStackLayout >
-
         <VerticalStackLayout Margin="20">
             <Label Text="Name" FontSize="16"/>
             <Entry Text="{Binding Name}" Placeholder="Name" />
             <BoxView HeightRequest="0.8" Color="Gray"/>
         </VerticalStackLayout>
-
         <VerticalStackLayout Margin="20">
-            <Label Text="Phone" FontSize="16"/>
-            <Entry Text="{Binding Phone}" Placeholder="Phone" />
+            <Label Text="Name" FontSize="16"/>
+            <Entry Text="{Binding SubjectId}" Placeholder="Name" />
             <BoxView HeightRequest="0.8" Color="Gray"/>
-        </VerticalStackLayout>
-
-        <VerticalStackLayout Margin="20">
-            <Label Text="BirthDate" FontSize="16"/>
-            <DatePicker Date="{Binding Birthdate}" />
-            <BoxView HeightRequest="0.8" Color="Gray"/>
-        </VerticalStackLayout>
-
-        <VerticalStackLayout Margin="20">
-            <Label Text="Image" FontSize="16"/>
-            <Entry Text="{Binding ImagePath}"  Placeholder="Image Url" />
-            <BoxView HeightRequest="0.8" Color="Gray"/>
+            <VerticalStackLayout Margin="20">
+                <Label Text="Name" FontSize="16"/>
+                <Entry Text="{Binding TeacherId}" Placeholder="Name" />
+                <BoxView HeightRequest="0.8" Color="Gray"/>
+            </VerticalStackLayout>
         </VerticalStackLayout>
         <HorizontalStackLayout HorizontalOptions="CenterAndExpand" Margin="20" >
-            <Button Text="save" Command="{Binding AddStudentCommand}"  HorizontalOptions="StartAndExpand" WidthRequest="150"/>
+            <Button Text="save" Command="{Binding AddClassRoomCommand}"  HorizontalOptions="StartAndExpand" WidthRequest="150"/>
             <Button Text="cancel" Command="{Binding OnCancelCommand}"  HorizontalOptions="EndAndExpand" WidthRequest="150"/>
         </HorizontalStackLayout>
     </StackLayout>

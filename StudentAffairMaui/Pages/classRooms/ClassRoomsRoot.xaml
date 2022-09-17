@@ -3,37 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:StudentAffairMaui"
              xmlns:viewModels="clr-namespace:StudentAffairMaui.ViewModels"
-             x:DataType="viewModels:StudentsRootViewModel"
-             x:Class="StudentAffairMaui.StudentsRoot"
-             Title="Students">
+             x:DataType="viewModels:ClassRoomsRootViewModel"
+             x:Class="StudentAffairMaui.ClassRoomsRoot"
+             Title="Teachers">
     <StackLayout>
-        <Button Text="add Student" Command="{Binding AddStudentCommand}" HorizontalOptions="EndAndExpand"/>
+        <Button Text="add Student" Command="{Binding AddClassRoomCommand}" HorizontalOptions="EndAndExpand"/>
         <Label Text="oamr" >
             <Label.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding AddStudentCommand}"/>
+                <TapGestureRecognizer Command="{Binding AddClassRoomCommand}"/>
             </Label.GestureRecognizers>
         </Label>
         <CollectionView ItemsSource="{Binding Entities}">
             <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="models:Student">
+                <DataTemplate x:DataType="models:ClassRoom">
                     <Frame Margin="10">
                         <StackLayout>
                             <HorizontalStackLayout Spacing="30">
-                                <Frame>
-                                    <Image Source="unknown_dark.png" HeightRequest="50" WidthRequest="50"/>
-                                </Frame>
                                 <VerticalStackLayout>
-                                    <Path />
                                     <Label Text="{Binding Name}" >
                                         <Label.GestureRecognizers>
                                         </Label.GestureRecognizers>
                                     </Label>
-                                    <Label Text="{Binding Phone}"/>
-                                    <HorizontalStackLayout Spacing="5">
-                                        <Label Text="Age:"/>
-                                        <Label Text="{Binding Age}"/>
-                                    </HorizontalStackLayout>
-                                    <Label Text="{Binding Birthdate}"/>
                                 </VerticalStackLayout>
                             </HorizontalStackLayout>
                         </StackLayout>

@@ -54,7 +54,6 @@
 
 	<ItemGroup>
 	  <Folder Include="Entities\" />
-	  <Folder Include="Validators\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -67,7 +66,34 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\BasePages\BaseForm.xaml">
+	  <Compile Update="Pages\classRooms\ClassRoomsForm.xaml.cs">
+	    <DependentUpon>ClassRoomsForm.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\classRooms\ClassRoomsRoot.xaml.cs">
+	    <DependentUpon>ClassRoomsRoot.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Teachers\TeachersForm.xaml.cs">
+	    <DependentUpon>TeachersForm.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Teachers\TeachersRoot.xaml.cs">
+	    <DependentUpon>TeachersRoot.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Pages\BaseSettingPages\BaseForm.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\classRooms\ClassRoomsForm.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\classRooms\ClassRoomsRoot.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Teachers\TeachersForm.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Teachers\TeachersRoot.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\TestPage.xaml">

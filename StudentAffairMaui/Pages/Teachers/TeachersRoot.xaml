@@ -3,19 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:StudentAffairMaui"
              xmlns:viewModels="clr-namespace:StudentAffairMaui.ViewModels"
-             x:DataType="viewModels:StudentsRootViewModel"
-             x:Class="StudentAffairMaui.StudentsRoot"
-             Title="Students">
+             x:DataType="viewModels:TeachersRootViewModel"
+             x:Class="StudentAffairMaui.TeachersRoot"
+             Title="Teachers">
     <StackLayout>
-        <Button Text="add Student" Command="{Binding AddStudentCommand}" HorizontalOptions="EndAndExpand"/>
-        <Label Text="oamr" >
-            <Label.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding AddStudentCommand}"/>
-            </Label.GestureRecognizers>
-        </Label>
+        <Button Text="add Teacher" Command="{Binding AddTeacherCommand}" HorizontalOptions="EndAndExpand"/>
         <CollectionView ItemsSource="{Binding Entities}">
             <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="models:Student">
+                <DataTemplate x:DataType="models:Teacher">
                     <Frame Margin="10">
                         <StackLayout>
                             <HorizontalStackLayout Spacing="30">

@@ -7,3 +7,5 @@ global using System.Text;
 global using System.Threading.Tasks;
 
 global using FluentValidation;
+
+global using Microsoft.Toolkit.Mvvm.ComponentModel;

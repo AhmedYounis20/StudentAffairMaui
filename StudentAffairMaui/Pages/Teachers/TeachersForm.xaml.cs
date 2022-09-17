@@ -2,9 +2,9 @@ using StudentAffairMaui.ViewModels;
 
 namespace StudentAffairMaui;
 
-public partial class StudentsForm : ContentPage
+public partial class TeachersForm : ContentPage
 {
-	public StudentsForm(StudentsFormViewModel viewModel)
+	public TeachersForm(StudentsFormViewModel viewModel)
 	{
 		InitializeComponent();
 		this.BindingContext = viewModel;
