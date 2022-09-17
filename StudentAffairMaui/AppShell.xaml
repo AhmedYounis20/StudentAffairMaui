@@ -18,4 +18,8 @@
         Title="Base Form"
         ContentTemplate="{DataTemplate local:BaseForm}"
         Route="BaseForm" />
+    <ShellContent
+        Title="Students"
+        ContentTemplate="{DataTemplate local:StudentsRoot}"
+        Route="StudentsRoot" />
 </Shell>

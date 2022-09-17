@@ -63,6 +63,7 @@
 
 	<ItemGroup>
 	  <PackageReference Include="FluentValidation" Version="11.2.2" />
+	  <PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2" />
 	</ItemGroup>
 
 	<ItemGroup>

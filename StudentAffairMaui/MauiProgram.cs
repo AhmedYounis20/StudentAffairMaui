@@ -1,4 +1,6 @@
-﻿namespace StudentAffairMaui;
+﻿using StudentAffairMaui.ViewModels;
+
+namespace StudentAffairMaui;
 
 public static class MauiProgram
 {
@@ -13,6 +15,12 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 		builder.Services.AddScoped(e => new HttpClient { BaseAddress = new Uri("https//www.sdaf.com")});
-		return builder.Build();
+
+        builder.Services.AddScoped<StudentsRoot>();
+
+
+        builder.Services.AddScoped<StudentsRootViewModel>();
+
+        return builder.Build();
 	}
 }
