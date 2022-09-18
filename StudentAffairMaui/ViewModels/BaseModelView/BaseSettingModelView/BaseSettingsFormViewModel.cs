@@ -7,7 +7,7 @@ public partial class BaseSettingsFormViewModel<TEntity> : BaseFormsViewModel<TEn
 {
     private readonly IBaseSettingService<TEntity> _baseSettingService;
 
- 
+
     public BaseSettingsFormViewModel(IBaseSettingService<TEntity> baseSettingService) :base(baseSettingService) => _baseSettingService = baseSettingService;
 
     

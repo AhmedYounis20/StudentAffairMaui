@@ -73,7 +73,7 @@ public class BaseService<TEntity> : IBaseService<TEntity> where TEntity : Base
     {
         try
         {
-             await _httpClient.PostAsJsonAsync<TEntity>($"api/{typeof(TEntity).Name}/", entity);
+             await _httpClient.PutAsJsonAsync<TEntity>($"api/{typeof(TEntity).Name}/", entity);
         }
         catch (Exception ex)
         {

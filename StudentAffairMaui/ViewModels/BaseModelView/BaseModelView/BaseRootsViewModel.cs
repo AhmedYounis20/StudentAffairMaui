@@ -31,4 +31,6 @@ public partial class BaseRootsViewModel<TEntity,TEntityForm>: ObservableObject w
         await Shell.Current.DisplayAlert($"{typeof(TEntityForm).Name}", Ex.Message, "Ok"); 
         }
     }
+
+     
 }
