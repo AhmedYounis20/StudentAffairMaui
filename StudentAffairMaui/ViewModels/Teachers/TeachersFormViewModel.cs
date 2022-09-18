@@ -2,18 +2,16 @@
 using Microsoft.Toolkit.Mvvm.Input;
 
 namespace StudentAffairMaui.ViewModels;
-
+[QueryProperty(nameof(TeacherDetails), "EntityDetails")]
+[QueryProperty(nameof(Operation), "Operation")]
 public partial class TeachersFormViewModel : BaseSettingsFormViewModel<Teacher>
 {
     private readonly ITeachersService _teachersService;
     public TeachersFormViewModel(ITeachersService teachersService) :base(teachersService) => _teachersService= teachersService;
-
     [ObservableProperty]
-    private string _name;
+    private Teacher _teacherDetails;
     [ObservableProperty]
-    private string _phone;
-    [ObservableProperty]
-    private DateTime _birthdate;
+    protected string _operation = "Add";
     public override async Task AddEntity()
     {
         if (Internet.CheckInternet())
@@ -23,9 +21,9 @@ public partial class TeachersFormViewModel : BaseSettingsFormViewModel<Teacher>
                 
                 Teacher teacher = await _teachersService.Create(new Teacher
                 {
-                    Name = Name,
-                    Phone = Phone,
-                    Birthdate = Birthdate,
+                    Name = TeacherDetails.Name,
+                    Phone = TeacherDetails.Phone,
+                    Birthdate = TeacherDetails.Birthdate,
                 });
                 await Shell.Current.DisplayAlert("Seccessed", "Record Saved", "Ok");
             }
@@ -36,12 +34,19 @@ public partial class TeachersFormViewModel : BaseSettingsFormViewModel<Teacher>
         }
         else 
             await Shell.Current.DisplayAlert("Netowk Falid", "Please Check Your Wifi or Mobile Data.", "Ok");
-        await Shell.Current.DisplayAlert("Netowk Falid", Connectivity.Current.NetworkAccess.ToString(), "Ok");
         await Cancel();
     }
+
     [ICommand]
-    public async Task AddTeacher()=> await AddEntity();
+    public async Task SubmitForm()
+    {
+        if (Operation == "Add")
+            await AddEntity();
+        if (Operation == "Update")
+            await base.UpdateEntity(TeacherDetails);
+        if (Operation == "Details")
+            await base.Cancel();
+    }
     [ICommand]
     public new async Task OnCancel() =>await base.Cancel();
-    
 }

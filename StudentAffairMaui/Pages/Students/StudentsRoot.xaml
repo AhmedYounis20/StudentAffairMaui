@@ -7,15 +7,9 @@
              x:Class="StudentAffairMaui.StudentsRoot"
              Title="Students">
     <ScrollView>
-    <StackLayout>
-        
-        <Button Text="add Student" Command="{Binding AddStudentCommand}" HorizontalOptions="EndAndExpand"/>
-        <Label Text="oamr" >
-            <Label.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding AddStudentCommand}"/>
-            </Label.GestureRecognizers>
-        </Label>
-        <CollectionView ItemsSource="{Binding Entities}">
+        <StackLayout Margin="10">
+            <Button Text="add Student" Command="{Binding AddStudentCommand}" HorizontalOptions="EndAndExpand"/>
+            <CollectionView ItemsSource="{Binding Entities}">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:Student">
                     <Frame Margin="10">

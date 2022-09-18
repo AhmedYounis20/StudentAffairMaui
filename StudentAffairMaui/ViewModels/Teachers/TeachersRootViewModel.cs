@@ -2,7 +2,7 @@
 
 namespace StudentAffairMaui.ViewModels;
 
-public partial class TeachersRootViewModel : BaseRootsViewModel<Teacher, TeachersForm>
+public partial class TeachersRootViewModel : BaseSettingsRootViewModel<Teacher, TeachersForm>
 {
 
     public TeachersRootViewModel(ITeachersService teachersService) : base(teachersService)
@@ -13,4 +13,8 @@ public partial class TeachersRootViewModel : BaseRootsViewModel<Teacher, Teacher
 
     [ICommand]
     public async Task AddTeacher() => await base.AddEntity();
+   
+    [ICommand]
+    public async Task Operations(Teacher teahcer) => await base.DisplayOptions(teahcer);
+
 }

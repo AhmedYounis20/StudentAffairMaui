@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 
 namespace StudentAffairMaui.ViewModels;
 
-public partial class ClassRoomsRootViewModel : BaseRootsViewModel<ClassRoom,ClassRoomsForm>
+public partial class ClassRoomsRootViewModel : BaseSettingsRootViewModel<ClassRoom,ClassRoomsForm>
 {
    
     public ClassRoomsRootViewModel(IClassRoomsService teachersService) : base(teachersService)
@@ -15,4 +15,7 @@ public partial class ClassRoomsRootViewModel : BaseRootsViewModel<ClassRoom,Clas
 
     [ICommand]
     public async Task AddClassRoom() => await base.AddEntity();
+
+    [ICommand]
+    public async Task Operations(ClassRoom classRoom) => await base.DisplayOptions(classRoom);
 }

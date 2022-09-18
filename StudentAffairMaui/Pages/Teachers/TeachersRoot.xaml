@@ -14,11 +14,23 @@
                     <Frame Margin="10">
                         <StackLayout>
                             <HorizontalStackLayout Spacing="30">
+                                <Frame>
+                                    <Image Source="unknown_dark.png" HeightRequest="50" WidthRequest="50"/>
+                                </Frame>
                                 <VerticalStackLayout>
+                                    <Path />
                                     <Label Text="{Binding Name}" >
                                         <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:TeachersRootViewModel}},Path=OperationsCommand}"
+                                                                      CommandParameter="{Binding .}"/>
                                         </Label.GestureRecognizers>
                                     </Label>
+                                    <Label Text="{Binding Phone}"/>
+                                    <HorizontalStackLayout Spacing="5">
+                                        <Label Text="Age:"/>
+                                        <Label Text="{Binding Age}"/>
+                                    </HorizontalStackLayout>
+                                    <Label Text="{Binding Birthdate}"/>
                                 </VerticalStackLayout>
                             </HorizontalStackLayout>
                         </StackLayout>

@@ -14,7 +14,6 @@ public partial class StudentsFormViewModel : BaseSettingsFormViewModel<Student>
     public StudentsFormViewModel(IStudentsService studentsService) : base(studentsService)
     {
         _studentsService = studentsService;
-        Shell.Current.DisplayAlert("error", Operation, "cancel");
     }
     public override async Task AddEntity()
     {

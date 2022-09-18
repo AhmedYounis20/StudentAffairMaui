@@ -7,7 +7,7 @@
     Shell.FlyoutBehavior="Flyout">
     <Shell.FlyoutHeader>
         <Grid>
-            <Image Source="school.jpg"/>
+            <Image Source="school.png"/>
         </Grid>
     </Shell.FlyoutHeader>
 

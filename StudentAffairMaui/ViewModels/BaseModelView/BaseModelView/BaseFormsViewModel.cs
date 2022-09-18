@@ -41,7 +41,6 @@ public partial class BaseFormsViewModel<TEntity> : ObservableObject where TEntit
         }
         else
             await Shell.Current.DisplayAlert("Netowk Falid", "Please Check Your Wifi or Mobile Data.", "Ok");
-        await Shell.Current.DisplayAlert("Netowk Falid", Connectivity.Current.NetworkAccess.ToString(), "Ok");
         await Cancel();
     }
     public virtual async Task Cancel()

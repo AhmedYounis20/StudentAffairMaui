@@ -18,6 +18,8 @@
                                 <VerticalStackLayout>
                                     <Label Text="{Binding Name}" >
                                         <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:ClassRoomsRootViewModel}},Path=OperationsCommand}"
+                                                                      CommandParameter="{Binding .}"/>
                                         </Label.GestureRecognizers>
                                     </Label>
                                 </VerticalStackLayout>

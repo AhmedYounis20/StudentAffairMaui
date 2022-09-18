@@ -22,21 +22,29 @@
         </VerticalStackLayout >
         <VerticalStackLayout Margin="20">
             <Label Text="Name" FontSize="16"/>
-            <Entry Text="{Binding Name}" Placeholder="Name" />
+            <Entry Text="{Binding ClassRoomDetails.Name}" Placeholder="Name" />
             <BoxView HeightRequest="0.8" Color="Gray"/>
         </VerticalStackLayout>
         <VerticalStackLayout Margin="20">
-            <Label Text="Name" FontSize="16"/>
-            <Entry Text="{Binding SubjectId}" Placeholder="Name" />
-            <BoxView HeightRequest="0.8" Color="Gray"/>
+            <VerticalStackLayout Margin="20">
+                <Picker Title="Select a Teacher"
+                ItemsSource="{Binding Teachers}"
+                ItemDisplayBinding="{Binding Name}" 
+                 SelectedItem="{Binding SelectedTeacher}"/>
+                <BoxView HeightRequest="0.8" Color="Gray"/>
+            </VerticalStackLayout>
             <VerticalStackLayout Margin="20">
                 <Label Text="Name" FontSize="16"/>
-                <Entry Text="{Binding TeacherId}" Placeholder="Name" />
+                <Picker Title="Select a Subject"
+                ItemsSource="{Binding Subjects}"
+                ItemDisplayBinding="{Binding Name}"
+                SelectedItem="{Binding SelectedSubject}"
+                        />
                 <BoxView HeightRequest="0.8" Color="Gray"/>
             </VerticalStackLayout>
         </VerticalStackLayout>
         <HorizontalStackLayout HorizontalOptions="CenterAndExpand" Margin="20" >
-            <Button Text="save" Command="{Binding AddClassRoomCommand}"  HorizontalOptions="StartAndExpand" WidthRequest="150"/>
+            <Button Text="save" Command="{Binding SubmitFormCommand}"  HorizontalOptions="StartAndExpand" WidthRequest="150"/>
             <Button Text="cancel" Command="{Binding OnCancelCommand}"  HorizontalOptions="EndAndExpand" WidthRequest="150"/>
         </HorizontalStackLayout>
     </StackLayout>

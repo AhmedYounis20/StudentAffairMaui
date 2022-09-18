@@ -23,25 +23,25 @@
 
         <VerticalStackLayout Margin="20">
             <Label Text="Name" FontSize="16"/>
-            <Entry Text="{Binding Name}" Placeholder="Name" />
+            <Entry Text="{Binding TeacherDetails.Name}" Placeholder="Name" />
             <BoxView HeightRequest="0.8" Color="Gray"/>
         </VerticalStackLayout>
 
         <VerticalStackLayout Margin="20">
             <Label Text="Phone" FontSize="16"/>
-            <Entry Text="{Binding Phone}" Placeholder="Phone" />
+            <Entry Text="{Binding TeacherDetails.Phone}" Placeholder="Phone" />
             <BoxView HeightRequest="0.8" Color="Gray"/>
         </VerticalStackLayout>
 
         <VerticalStackLayout Margin="20">
             <Label Text="BirthDate" FontSize="16"/>
-            <DatePicker Date="{Binding Birthdate}" />
+            <DatePicker Date="{Binding TeacherDetails.Birthdate}" />
             <BoxView HeightRequest="0.8" Color="Gray"/>
         </VerticalStackLayout>
 
 
         <HorizontalStackLayout HorizontalOptions="CenterAndExpand" Margin="20" >
-            <Button Text="save" Command="{Binding AddTeacherCommand}"  HorizontalOptions="StartAndExpand" WidthRequest="150"/>
+            <Button Text="save" Command="{Binding SubmitFormCommand}"  HorizontalOptions="StartAndExpand" WidthRequest="150"/>
             <Button Text="cancel" Command="{Binding OnCancelCommand}"  HorizontalOptions="EndAndExpand" WidthRequest="150"/>
         </HorizontalStackLayout>
     </StackLayout>
