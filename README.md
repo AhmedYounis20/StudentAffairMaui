@@ -1,6 +1,6 @@
 # School Management System Maui App
 
-The **School Management System** is a comprehensive web application developed using ASP.NET and Blazor WebAssembly. 🚀 It is meticulously designed to streamline and enhance the management of educational institutions. This powerful system empowers administrators to efficiently handle various aspects of school management, fostering a more organized and effective educational environment.
+The **School Management System** is a comprehensive web application developed using ASP.NET, Blazor WebAssembly and MAUI. 🚀 It is meticulously designed to streamline and enhance the management of educational institutions. This powerful system empowers administrators to efficiently handle various aspects of school management, fostering a more organized and effective educational environment.
 
 ## Key Features:
 
