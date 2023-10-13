@@ -14,7 +14,7 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
-		builder.Services.AddScoped(e => new HttpClient { BaseAddress= new Uri("https://f444-102-187-80-136.ngrok.io") });
+		builder.Services.AddScoped(e => new HttpClient { BaseAddress= new Uri("https://084a-156-221-115-8.ngrok-free.app") });
 
 		// Services
         builder.Services.AddSingleton<ITeachersService, TeachersService>();

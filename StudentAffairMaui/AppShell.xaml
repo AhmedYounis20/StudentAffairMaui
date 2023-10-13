@@ -18,18 +18,6 @@
         Route="MainPage" />
 
     <ShellContent
-        Title="Test Page"
-        Icon="test.jpg"
-        ContentTemplate="{DataTemplate local:TestPage}"
-        Route="TestPage" />
-
-    <ShellContent
-        Title="Base Form"
-        Icon="test.jpg"
-        ContentTemplate="{DataTemplate local:BaseForm}"
-        Route="BaseForm" />
-
-    <ShellContent
         Title="Students"
         Icon="student.jpg"
         ContentTemplate="{DataTemplate local:StudentsRoot}"
