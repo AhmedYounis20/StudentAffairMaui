@@ -54,6 +54,7 @@
 
 	<ItemGroup>
 	  <Folder Include="Entities\" />
+	  <Folder Include="Resources\Images\screenshots\" />
 	</ItemGroup>
 
 	<ItemGroup>
